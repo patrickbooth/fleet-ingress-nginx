@@ -1,0 +1,50 @@
+namespace: ingress-nginx
+
+# Custom helm options
+helm:
+  # The release name to use. If empty a generated release name will be used
+  releaseName: ingress-nginx
+
+  # Optional map of labels, that are set at the bundle and can be used in a
+  # dependsOn.selector
+  # labels:
+  #   key: value
+
+  # The directory of the chart in the repo.  Also any valid go-getter supported
+  # URL can be used there is specify where to download the chart from.
+  # If repo below is set this value if the chart name in the repo
+  chart: "git::https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx"
+
+  # An https to a valid Helm repository to download the chart from
+  # repo: ""
+
+  # Used if repo is set to look up the version of the chart
+  version: "1.10.0"
+
+  # Force recreate resource that can not be updated
+  force: false
+
+  # How long for helm to wait for the release to be active. If the value
+  # is less that or equal to zero, we will not wait in Helm
+  timeoutSeconds: 0
+
+  # Custom values that will be passed as values.yaml to the installation
+  values:
+    replicaCount: 2
+
+  # Path to any values files that need to be passed to helm during install
+  # valuesFiles:
+    # - values1.yaml
+    # - values2.yaml
+
+  # Allow to use values files from configmaps or secrets defined in the downstream clusters
+  # valuesFrom:
+  # - configMapKeyRef:
+  #     name: configmap-values
+       # default to namespace of bundle
+  #     namespace: default
+  #     key: values.yaml
+  # - secretKeyRef:
+  #     name: secret-values
+  #     namespace: default
+  #     key: values.yaml
