@@ -1,5 +1,5 @@
 # -- Override the deployment namespace; defaults to .Release.Namespace
-namespaceOverride: "ingress"
+namespaceOverride: "ingress-nginx"
 
 ## Labels to apply to all resources
 commonLabels: {}
