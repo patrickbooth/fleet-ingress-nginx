@@ -1,0 +1,2 @@
+# -- Override the deployment namespace; defaults to .Release.Namespace
+namespaceOverride: "ingress"
