@@ -19,7 +19,7 @@ helm:
   repo: "https://kubernetes.github.io/ingress-nginx"
 
   # Used if repo is set to look up the version of the chart
-  version: "1.10.0"
+  version: "4.10.0"
 
   # Force recreate resource that can not be updated
   force: false
