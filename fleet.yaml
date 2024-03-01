@@ -41,8 +41,7 @@ helm:
 
   # Custom values that will be passed as values.yaml to the installation
   values:
-    replicaCount: 2
-
+    namespaceOveride: ingress
   # Path to any values files that need to be passed to helm during install
   # valuesFiles:
     # - values1.yaml
