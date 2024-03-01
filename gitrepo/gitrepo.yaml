@@ -7,5 +7,5 @@ metadata:
 spec:
   repo: "https://github.com/patrickbooth/fleet-ingress-nginx"
   paths:
-  - /
+  - .
   branch: main
