@@ -1,2 +1,10 @@
 # -- Override the deployment namespace; defaults to .Release.Namespace
 namespaceOverride: "ingress"
+
+## Labels to apply to all resources
+commonLabels: {}
+
+## Controller settings
+controller:
+  service:
+    type: NodePort
