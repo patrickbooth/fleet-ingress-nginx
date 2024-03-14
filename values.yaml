@@ -18,4 +18,6 @@ controller:
     prometheus.io/port: "10254"
     prometheus.io/scheme: "http" # Added for otel discover/scraping
     prometheus.io/scrape: "true"
-
+ ## Configure logging 
+ log-format-escape-json: "true"
+ log-format-upstream: '{"timestamp": "$time_iso8601", "requestID": "$req_id", "proxyUpstreamName": "$proxy_upstream_name", "proxyAlternativeUpstreamName": "$proxy_alternative_upstream_name","upstreamStatus": "$upstream_status", "upstreamAddr": "$upstream_addr","httpRequest":{"requestMethod": "$request_method", "requestUrl": "$host$request_uri", "status": $status,"requestSize": "$request_length", "responseSize": "$upstream_response_length", "userAgent": "$http_user_agent", "remoteIp": "$remote_addr", "referer": "$http_referer", "latency": "$upstream_response_time s", "protocol":"$server_protocol"}}'
