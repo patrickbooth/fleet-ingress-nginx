@@ -17,4 +17,5 @@ controller:
     prometheus.io/path: "/metrics" # Added for otel discover/scraping
     prometheus.io/port: "10254"
     prometheus.io/scheme: "http" # Added for otel discover/scraping
-    prometheus.io/scrape: "true
+    prometheus.io/scrape: "true"
+
