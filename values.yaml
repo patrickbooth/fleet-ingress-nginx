@@ -11,3 +11,10 @@ controller:
     nodePorts:
       http: 30080
       https: 30443
+  metrics:
+    enabled: true
+  podAnnotations:
+    prometheus.io/path: "/metrics" # Added for otel discover/scraping
+    prometheus.io/port: "10254"
+    prometheus.io/scheme: "http" # Added for otel discover/scraping
+    prometheus.io/scrape: "true
